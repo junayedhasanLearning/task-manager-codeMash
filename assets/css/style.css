@@ -1,0 +1,168 @@
+/* Global Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #222831;
+}
+
+li {
+  list-style: none;
+} /* Container styling */
+.container {
+  min-width: 60rem;
+  margin: 2rem auto;
+  padding: 3rem;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.7); /* White color with 70% opacity */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhanced box shadow */
+}
+
+/* Title styling */
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title img {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 10px;
+}
+
+.title h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Task input styling */
+.task-input {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-right: 1rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+
+.task-input button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.task-input button:hover {
+  background-color: #0056b3;
+}
+
+/* Task list styling */
+.show-task {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.show-task li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.show-task li:last-child {
+  border-bottom: none;
+}
+
+.show-task li:hover {
+  background-color: #f0f0f0;
+}
+
+.show-task li.checked {
+  text-decoration: line-through;
+  color: lightslategray;
+}
+
+.show-task li::before {
+  content: "";
+  width: 1.6rem;
+  aspect-ratio: 1;
+  background-image: url("../image/round.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 0.5rem;
+}
+
+.show-task li.checked::before {
+  content: "";
+  width: 1.6rem;
+  aspect-ratio: 1;
+  background-image: url("../image/checked.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 0.5rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.show-task li span {
+  width: 1.6rem;
+  aspect-ratio: 1;
+  background-image: url("../image/x-mark.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 0.5rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
